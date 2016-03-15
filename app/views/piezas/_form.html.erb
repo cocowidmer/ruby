@@ -1,0 +1,13 @@
+<%= form_for([@auto, @auto.piezas.build]) do |f| %>
+  <p>
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :cantidad %><br>
+    <%= f.number_field :cantidad %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

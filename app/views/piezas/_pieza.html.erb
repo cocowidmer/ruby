@@ -1,0 +1,15 @@
+<p>
+	<strong>Nombre:</strong>
+    <%= pieza.nombre %>
+</p>
+ 
+<p>
+    <strong>Cantidad:</strong>
+    <%= pieza.cantidad %>
+</p>
+
+<p>
+  <%= link_to 'Borrar Pieza', [pieza.auto, pieza],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

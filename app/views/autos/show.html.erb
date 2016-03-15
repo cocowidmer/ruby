@@ -18,6 +18,12 @@
   <%= @auto.longitud %>
 </p>
 
+<h2>Piezas</h2>
+<%= render @auto.piezas %>
+
+<h2>Agregar piezas:</h2>
+<%= render 'piezas/form' %>
+
 
 <%= link_to 'Edit', edit_auto_path(@auto) %> |
 <%= link_to 'Atrás', autos_path %>
