@@ -1,0 +1,28 @@
+<%= link_to 'Agregar mas autos', new_auto_path %>
+
+
+<h1>Listado de Autos</h1>
+
+<table>
+  <tr>
+    <th>Marca</th>
+    <th>Modelo</th>
+    <th>Latitud</th>
+    <th>Longitud</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @autos.each do |auto| %>
+    <tr>
+      <td><%= auto.marca %></td>
+      <td><%= auto.modelo %></td>
+      <td><%= auto.latitud %></td>
+      <td><%= auto.longitud %></td> 
+      <td><%= link_to 'Show', auto_path(auto) %></td>
+      <td><%= link_to 'Edit', edit_auto_path(auto) %></td>
+      <td><%= link_to 'Destroy', auto_path(auto),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
